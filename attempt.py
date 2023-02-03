@@ -14,16 +14,6 @@ def raw_input():
     data  = f.read()
     return data
 
-'''
-first_multiple_input = raw_input().rstrip().split()
-n = int(first_multiple_input[0])
-m = int(first_multiple_input[1])
-matrix = []
-
-for _ in xrange(n):
-    matrix_item = raw_input()
-    matrix.append(matrix_item)
-'''
 
 raw_input2 = re.findall(pattern, raw_input() )
 
@@ -56,11 +46,13 @@ print(result)
 result2 = ''.join(result)
 
 #---------- remove initial occurance of #,$,% symbols -------
-result2 = result2.replace('#',' ',1)
-result2 = result2.replace('$','',1)
-result2 = result2.replace('%',' ',1)
-
+result2 = re.sub("#", " ", result2, 1)
+result2 = re.sub("\$", "", result2, 2)
+result2 = re.sub("%", " ", result2, 1)
+result2 = re.sub("%", " %", result2, 1)
 #print(re.sub(r'a-z\sa-z', "", result2))
+
+
 
 print('----output-----')
 print(result2)
