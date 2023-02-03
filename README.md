@@ -1,6 +1,6 @@
 # stringModification
 
-#useage :
+# useage :
 ```
 python attempt.py
 ```
